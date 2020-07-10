@@ -7,10 +7,10 @@
         <nav class="navbar">
             <a class="navbutton" href="/">Add Items</a>
             <a class="navbutton" href="/view.html">View Cart</a>
-            <script defer src="../src/index.js"></script>
+            <script defer src="./js/index.js"></script>
         </nav>
         <main class="main">
-            <form method="post">
+            <form id="input-form">
                 <label for="title">Title:</label>
                 <input name="title" type="text">
                 <label for="author">Author:</label>
@@ -21,6 +21,7 @@
                 <input name="count" type="number">
                 <input type="submit" value="Add to Cart">
             </form>
+            <p class="error invisible" id="error-message">There was an error creating the object!</p>
         </main>
     </body>
 </html>

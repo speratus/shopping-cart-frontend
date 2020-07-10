@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <nav class="navbar">
+            <a class="navbutton" href="/">Add Items</a>
+            <a class="navbutton" href="/view.html">View Cart</a>
+            <script defer src="../src/index.js"></script>
+        </nav>
+        <main class="main">
+            <form method="post">
+                <label for="title">Title:</label>
+                <input name="title" type="text">
+                <label for="author">Author:</label>
+                <input name="author" type="text">
+                <label for="price">Price:</label>
+                <input name="price" type="number">
+                <label for="count">Count:</label>
+                <input name="count" type="number">
+                <input type="submit" value="Add to Cart">
+            </form>
+        </main>
+    </body>
+</html>

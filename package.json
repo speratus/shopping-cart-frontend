@@ -8,5 +8,7 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {}
+  "devDependencies": {
+    "grunt": "^1.2.1"
+  }
 }

@@ -2,9 +2,11 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         compass: {
-            options: {
-                sassDir: 'assets/sass/',
-                cssDir: 'public/css/'
+            basic: {
+                options: {
+                    sassDir: 'assets/scss/',
+                    cssDir: 'public/css/'
+                }
             }
         }
     })

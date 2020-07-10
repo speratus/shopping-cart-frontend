@@ -4,7 +4,3 @@ interface Item {
     price: number;
     count: number;
 }
-
-function displayItem(item: Item) {
-    console.log(item);
-}

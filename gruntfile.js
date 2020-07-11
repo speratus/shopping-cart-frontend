@@ -7,6 +7,13 @@ module.exports = function(grunt) {
                     sassDir: 'assets/scss/',
                     cssDir: 'public/css/'
                 }
+            },
+            watch: {
+                options: {
+                    sassDir: 'assets/scss',
+                    cssDir: 'public/css/',
+                    watch: true
+                }
             }
         }
     })
@@ -30,4 +37,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
 
     grunt.registerTask('default', ['compass', 'tsc']);
+
+    grunt.registerTask('recompile', ['compass:watch']);
 };

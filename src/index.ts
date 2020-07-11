@@ -36,7 +36,10 @@ function executeFetch(address: string, options: FetchOptions = {method: 'GET', h
     if (data) {
         query.body = JSON.stringify(data);
     }
-    return fetch(address, query).then(res => res.json());
+    return fetch(address, query).then(res => res.json()).catch(error => {
+        console.log(error);
+        return {};
+    });
 }
 
 let errorElement = document.querySelector("#error-message");

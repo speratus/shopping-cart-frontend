@@ -15,7 +15,10 @@ function executeFetch(address, options, data) {
     if (data) {
         query.body = JSON.stringify(data);
     }
-    return fetch(address, query).then(function (res) { return res.json(); });
+    return fetch(address, query).then(function (res) { return res.json(); }).catch(function (error) {
+        console.log(error);
+        return {};
+    });
 }
 var errorElement = document.querySelector("#error-message");
 function postNewItem(item) {

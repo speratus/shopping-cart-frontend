@@ -15,6 +15,29 @@ function createTR(...cells: Element[]): Element {
     return tr;
 }
 
+function deleteItem(id: string) {
+    let options = {
+        method: 'DELETE',
+        headers: {
+            'Accept': 'application/json'
+        }
+    }
+    executeFetch(ITEMS_ADDRESS + "/" + id, options).then(data => getBooks());
+}
+
+function createDeleteButton(item: POJO): Element {
+    let td = document.createElement('td');
+    let button = document.createElement('button');
+    button.textContent = 'x';
+    button.dataset.id = item.id;
+
+    button.addEventListener('click', () => {
+        deleteItem(button.dataset.id);
+    });
+    td.appendChild(button);
+    return td;
+}
+
 function fillCart(data: Array<POJO>) {
     let total = 0;
     cart.innerHTML = "";
@@ -25,9 +48,11 @@ function fillCart(data: Array<POJO>) {
         let price = createTD(b.price);
         let count = createTD(b.count);
 
+        let del = createDeleteButton(b);
+
         total += b.price * b.count;
 
-        let tr = createTR(title, author, price, count);
+        let tr = createTR(title, author, price, count, del);
         cart.appendChild(tr);
     }
     totalEl.textContent = total.toString();

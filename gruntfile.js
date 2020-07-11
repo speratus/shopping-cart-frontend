@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-compass');
 
-    grunt.registerTask('default', ['compass', 'tsc']);
+    grunt.registerTask('default', ['compass:basic', 'tsc']);
 
     grunt.registerTask('recompile', ['compass:watch']);
 };

@@ -58,9 +58,9 @@ function postNewItem(item: Book) {
     });
 }
 
-let form = document.querySelector('#input-form');
-form.addEventListener('submit', (e) => {
+function submitForm(e) {
     e.preventDefault();
+    let form = document.querySelector('#input-form');
     let title = form['title'].value;
     let author = form['author'].value;
     let price = form['price'].value;
@@ -74,4 +74,4 @@ form.addEventListener('submit', (e) => {
     }
 
     postNewItem(book);
-});
+}

@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Add items to your cart</title>
         <script defer src="./js/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
     </head>
     <body>
         <nav class="navbar">
@@ -11,7 +12,7 @@
             <a class="navbutton" href="./cart.html">View Cart</a>
         </nav>
         <main class="main">
-            <form id="input-form">
+            <form id="input-form" onsubmit="submitForm()">
                 <label for="title">Title:</label>
                 <input name="title" type="text">
                 <label for="author">Author:</label>

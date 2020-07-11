@@ -7,6 +7,7 @@ var ITEMS_ADDRESS = BACKEND_ADDRESS + "/items";
  * @param data the payload of the request if there is one.
  */
 function executeFetch(address, options, data) {
+    if (options === void 0) { options = { method: 'GET', headers: {} }; }
     var query = {
         method: options.method,
         headers: options.headers

@@ -8,11 +8,6 @@ interface Book {
     count: number;
 }
 
-interface FetchOptions {
-    method: string;
-    headers: object;
-}
-
 /**
  * Represents a plain old JavaScript object. Apparently, this is necessary to satisfy typescript and use
  * POJOs in the way I want to be able to.
@@ -21,13 +16,18 @@ interface POJO {
     [key: string]: any;
 }
 
+interface FetchOptions {
+    method: string;
+    headers: object;
+}
+
 /**
  * An abstract wrapper around fetch that can be reused throughout the codebase.
  * @param address The address to query
  * @param options The query options (e.g. method type, and additional headers)
  * @param data the payload of the request if there is one.
  */
-function executeFetch(address: string, options: FetchOptions, data?: object): Promise<POJO> {
+function executeFetch(address: string, options: FetchOptions = {method: 'GET', headers: {}}, data?: object): Promise<POJO> {
     let query: POJO = {
         method: options.method,
         headers: options.headers

@@ -9,19 +9,20 @@
     </head>
     <body>
         <nav class="navbar">
-            <a class="navbutton" href="./index.html">Add Items</a>
-            <a class="navbutton" href="./cart.html">View Cart</a>
+            <a class="navbutton" href="/">Add Items</a>
+            <a class="navbutton" href="/site/cart/">View Cart</a>
         </nav>
         <main class="main">
+        <h1>Please add a book to your cart:</h1>
         <form id="input-form">
                 <label for="title">Title:</label>
-                <input name="title" type="text">
+                <input name="title" type="text" placeholder="Hamlet"> <br>
                 <label for="author">Author:</label>
-                <input name="author" type="text">
+                <input name="author" type="text" placeholder="Shakespeare"> <br>
                 <label for="price">Price:</label>
-                <input name="price" type="number">
+                $<input name="price" type="number" placeholder="2"> <br>
                 <label for="count">Count:</label>
-                <input name="count" type="number">
+                <input name="count" type="number" placeholder="1"> <br>
                 <input type="submit" value="Add to Cart">
             </form>
             <p class="error invisible" id="error-message">There was an error adding the book to the cart!</p>

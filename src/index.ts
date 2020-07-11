@@ -58,20 +58,23 @@ function postNewItem(item: Book) {
     });
 }
 
-function submitForm(e) {
-    e.preventDefault();
-    let form = document.querySelector('#input-form');
-    let title = form['title'].value;
-    let author = form['author'].value;
-    let price = form['price'].value;
-    let count = form['count'].value;
-
-    let book: Book = {
-        title: title,
-        author: author,
-        price: price,
-        count: count
-    }
-
-    postNewItem(book);
+let form = document.querySelector('#input-form');
+if (form) {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let form = document.querySelector('#input-form');
+        let title = form['title'].value;
+        let author = form['author'].value;
+        let price = form['price'].value;
+        let count = form['count'].value;
+    
+        let book: Book = {
+            title: title,
+            author: author,
+            price: price,
+            count: count
+        }
+    
+        postNewItem(book);
+    });
 }

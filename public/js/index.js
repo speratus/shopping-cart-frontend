@@ -36,17 +36,20 @@ function postNewItem(item) {
     });
 }
 var form = document.querySelector('#input-form');
-form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var title = form['title'].value;
-    var author = form['author'].value;
-    var price = form['price'].value;
-    var count = form['count'].value;
-    var book = {
-        title: title,
-        author: author,
-        price: price,
-        count: count
-    };
-    postNewItem(book);
-});
+if (form) {
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var form = document.querySelector('#input-form');
+        var title = form['title'].value;
+        var author = form['author'].value;
+        var price = form['price'].value;
+        var count = form['count'].value;
+        var book = {
+            title: title,
+            author: author,
+            price: price,
+            count: count
+        };
+        postNewItem(book);
+    });
+}

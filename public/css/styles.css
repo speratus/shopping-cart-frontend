@@ -1,15 +1,62 @@
-/* line 5, ../../assets/scss/styles.scss */
+/* line 8, ../../assets/scss/styles.scss */
 body {
   font-family: Helvetica, sans-serif;
   margin: 0px;
+  font-size: 20px;
 }
 
-/* line 10, ../../assets/scss/styles.scss */
+/* line 14, ../../assets/scss/styles.scss */
 a {
   text-decoration: none;
 }
 
-/* line 14, ../../assets/scss/styles.scss */
-nav {
-  background-color: #0f0f0f;
+/* line 18, ../../assets/scss/styles.scss */
+.navbar {
+  background-color: #1f1f1f;
+  height: 40px;
+  padding-top: 10px;
+}
+
+/* line 24, ../../assets/scss/styles.scss */
+.navbutton {
+  padding: 10px;
+  color: white;
+  height: 100%;
+}
+
+/* line 30, ../../assets/scss/styles.scss */
+.navbutton:hover {
+  background-color: #6d6d6d;
+}
+
+/* line 34, ../../assets/scss/styles.scss */
+.navbutton:visited {
+  color: white;
+}
+
+/* line 38, ../../assets/scss/styles.scss */
+main {
+  padding: 50px;
+  text-align: center;
+}
+
+/* line 43, ../../assets/scss/styles.scss */
+table {
+  text-align: center;
+  margin: auto;
+}
+
+/* line 48, ../../assets/scss/styles.scss */
+td, th {
+  padding: 10px;
+}
+
+/* line 52, ../../assets/scss/styles.scss */
+.error {
+  color: #fa3c3c;
+}
+
+/* line 56, ../../assets/scss/styles.scss */
+.invisible {
+  display: none;
 }

@@ -1,17 +1,58 @@
 $fonts: Helvetica, sans-serif;
+$default-font-size: 20px;
 
-$dark-grey: rgb(15, 15, 15);
+$dark-grey: rgb(31, 31, 31);
+$hover-grey: #6d6d6d;
+$error-color: #fa3c3c;
 
 body {
     font-family: $fonts;
-    margin: 0px
+    margin: 0px;
+    font-size: $default-font-size;
 }
 
 a {
     text-decoration: none;
 }
 
-nav {
+.navbar {
     background-color: $dark-grey;
+    height: 40px;
+    padding-top: 10px;
 }
 
+.navbutton {
+    padding: 10px;
+    color: white;
+    height: 100%;
+}
+
+.navbutton:hover {
+    background-color: $hover-grey;
+}
+
+.navbutton:visited {
+    color: white;
+}
+
+main {
+    padding: 50px;
+    text-align: center;
+}
+
+table {
+    text-align: center;
+    margin: auto;
+}
+
+td, th {
+    padding: 10px
+}
+
+.error {
+    color: $error-color;
+}
+
+.invisible {
+    display: none;
+}
